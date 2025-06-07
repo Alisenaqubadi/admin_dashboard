@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(200px, 3fr) 15fr;
+    grid-template-rows: 13vh 87vh;
+}
+
+.sidebar {
+    background-color: rgb(52, 52, 126);
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10vh repeat(auto-fill, 6vh);
+}
+
+.main {
+    background-color: aqua;
+}
+
+#monitor-dashboard {
+    grid-row-start: 1;
+    padding-top: 20px;
+    height: 7.1vh;
+    position: relative;
+    left: 20%;
+}
+
+h2 {
+    grid-area: 1 / 2;
+    padding: 16px;
+    padding-top: 36px;
+    color: rgb(232, 242, 252);
+}
+
+h3 {
+padding-top: 5%;
+color: rgb(232, 242, 252);
+}
+
+img#monitor-dashboard ~ img {
+    position: relative;
+    left: 30%;
+    height: 4vh;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.patato {
+    margin-top: 10px;
+    height: 80%;
+    width: 80%;
+    grid-row: 1/ span 3;
+    grid-column: 2/span 3;
+    border-radius: 50%;
+    border: solid black;
+}
+
+.header h1 {
+    grid-column: 5;
+    grid-row: 2;
+    text-wrap-mode: nowrap;
+}
+
+#b1{
+    grid-area: -3/-3;
+}
+
+#b2 {
+    grid-area: -3/-4;
+}
+
+#b3{
+    grid-area: -3/-5;
+}
+
+
+
+/* by ai */
+button {
+  background: linear-gradient(to right, #3b82f6, #2563eb); /* gradient blue */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8); /* darker on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
+}
+
+ @media (min-width:1150px) {
+    #b1{
+    grid-area: -3/-4/-3/span 2;
+    }
+
+    #b2 {
+    grid-area: -3/-7/-3/span 2;
+    }
+
+    #b3{
+    grid-area: -3/-10/-3/span 2; 
+    }
+}
+
+@media (max-width:1149px) {
+    button {
+        font-size: 0.75rem;
+        padding: 0;
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20vh);
+    gap: 20px;
+    padding: 30px;
+}
+
+.div {
+    padding: 20px;
+    border: dotted;
+    border-radius: 20%;
+    background-color: azure;
+}
